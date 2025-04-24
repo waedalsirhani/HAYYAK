@@ -1,782 +1,194 @@
-1.	Login Page – Full HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
-  <style>
-    body {
-      background: #0f1b4c;
-      font-family: Arial, sans-serif;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .login-container {
-      width: 90%;
-      max-width: 360px;
-      text-align: center;
-      padding: 20px;
-    }
-    .logo {
-      width: 60px;
-      margin-bottom: 20px;
-    }
-    .title {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-    .subtitle {
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-    .input-group {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .input {
-      padding: 10px;
-      font-size: 14px;
-      border: none;
-      border-radius: 8px;
-      flex: 1;
-      background: #f0f0f0;
-    }
-    .btn-continue {
-      width: 100%;
-      padding: 12px;
-      background-color: #a050b0;
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .btn-continue:hover {
-      background-color: #8e3fa1;
-    }
-  </style>
-</head>
-<body>
-  <div class="login-container">
-    <img src="logo.png" alt="Logo" class="logo" />
-    <h2 class="title">Sign In</h2>
-    <p class="subtitle">Enter Your Mobile Number</p>
-    <div class="input-group">
-      <input type="text" placeholder="+966" class="input" />
-      <input type="text" placeholder="XXXXXXXXXX" class="input" />
-    </div>
-    <button class="btn-continue">Continue</button>
-  </div>
-</body>
-</html>
 
-2.	OTP Page – Full HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OTP Verification</title>
-  <style>
-    body {
-      background: #0f1b4c;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .otp-container {
-      text-align: center;
-      width: 90%;
-      max-width: 360px;
-    }
-    .otp-title {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .otp-subtitle {
-      font-size: 14px;
-      margin-bottom: 30px;
-    }
-    .otp-inputs {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 30px;
-    }
-    .otp-inputs input {
-      width: 60px;
-      height: 60px;
-      font-size: 24px;
-      text-align: center;
-      border: none;
-      border-radius: 10px;
-      background: #f0f0f0;
-      color: #000;
-    }
-    .btn-verify {
-      width: 100%;
-      padding: 12px;
-      background-color: #a050b0;
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .btn-verify:hover {
-      background-color: #8e3fa1;
-    }
-  </style>
-</head>
-<body>
-  <div class="otp-container">
-    <h2 class="otp-title">Verify Number</h2>
-    <p class="otp-subtitle">Enter the 4-digit code sent to +966 XXXX</p>
-    <div class="otp-inputs">
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
-      <input type="text" maxlength="1" />
-    </div>
-    <button class="btn-verify">Verify</button>
-  </div>
-</body>
-</html>
 
-
-3.	Home Page – Full HTML
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0f1b4c;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 480px;
-      margin: auto;
-    }
-
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .top-bar .logo {
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .location {
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .search-bar {
-      background: #1a2b5c;
-      border-radius: 10px;
-      padding: 10px 15px;
-      margin-bottom: 20px;
-    }
-
-    .search-bar input {
-      width: 100%;
-      background: transparent;
-      border: none;
-      outline: none;
-      color: white;
-      font-size: 14px;
-    }
-
-    .categories {
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .category {
-      padding: 8px 14px;
-      background: #1a2b5c;
-      border-radius: 20px;
-      font-size: 14px;
-      white-space: nowrap;
-      cursor: pointer;
-    }
-
-    .category.active {
-      background: #a050b0;
-    }
-
-    .event-card {
-      background: #1a2b5c;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-
-    .event-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .event-info {
-      padding: 15px;
-    }
-
-    .event-title {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .event-meta {
-      font-size: 12px;
-      color: #ccc;
-      margin-bottom: 10px;
-    }
-
-    .event-btn {
-      padding: 10px 20px;
-      background: #a050b0;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .event-btn:hover {
-      background: #8e3fa1;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <div class="logo">HAYAK</div>
-      <div class="location">📍 Riyadh</div>
-    </div>
-
-    <!-- Search -->
-    <div class="search-bar">
-      <input type="text" placeholder="Search events, sports, music..." />
-    </div>
-
-    <!-- Categories -->
-    <div class="categories">
-      <div class="category active">All</div>
-      <div class="category">Events</div>
-      <div class="category">Sports</div>
-      <div class="category">Music</div>
-      <div class="category">Theater</div>
-    </div>
-
-    <!-- Event Cards -->
-    <div class="event-card">
-      <img src="event1.jpg" alt="Event 1" />
-      <div class="event-info">
-        <div class="event-title">Music Festival 2025</div>
-        <div class="event-meta">📅 Apr 20 • 📍 Jeddah</div>
-        <button class="event-btn">Buy Ticket</button>
-      </div>
-    </div>
-
-    <div class="event-card">
-      <img src="event2.jpg" alt="Event 2" />
-      <div class="event-info">
-        <div class="event-title">Football Final</div>
-        <div class="event-meta">📅 May 15 • 📍 Riyadh</div>
-        <button class="event-btn">Buy Ticket</button>
-      </div>
-    </div>
-
-  </div>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4.	Buy Ticket Page – Full HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Buy Ticket</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0f1b4c;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 480px;
-      margin: auto;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .back-btn {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .event-banner {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-label {
-      font-size: 14px;
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    select,
-    input[type="number"] {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      font-size: 14px;
-      background: #f0f0f0;
-      color: #000;
-    }
-
-    .summary {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .btn-confirm {
-      width: 100%;
-      padding: 14px;
-      background-color: #a050b0;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .btn-confirm:hover {
-      background-color: #8e3fa1;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Header -->
-    <div class="header">
-      <button class="back-btn">←</button>
-      <div class="title">Buy Ticket</div>
-    </div>
-
-    <!-- Event Banner -->
-    <img src="event1.jpg" alt="Event Banner" class="event-banner" />
-
-    <!-- Form -->
-    <div class="form-group">
-      <label class="form-label">Quantity</label>
-      <input type="number" min="1" value="1" />
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">Section</label>
-      <select>
-        <option>General Admission</option>
-        <option>VIP</option>
-        <option>Front Row</option>
-      </select>
-    </div>
-
-    <!-- Summary -->
-    <div class="summary">
-      <span>Total</span>
-      <span>SAR 150</span>
-    </div>
-
-    <!-- Confirm Button -->
-    <button class="btn-confirm">Confirm Purchase</button>
-  </div>
-</body>
-</html>
-5.	Ticket Details Page – Full HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ticket Details</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0f1b4c;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 480px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .title {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-
-    .qr-box {
-      background: #1a2b5c;
-      padding: 30px;
-      border-radius: 16px;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .qr-box img {
-      width: 180px;
-      height: 180px;
-    }
-
-    .info {
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    .status {
-      margin-top: 20px;
-      padding: 8px 16px;
-      background: #22c55e;
-      border-radius: 20px;
-      display: inline-block;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .btn-row {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .btn-action {
-      padding: 10px 20px;
-      background: #a050b0;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .btn-action:hover {
-      background: #8e3fa1;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="title">Music Festival 2025</div>
-    <div class="subtitle">📍 Riyadh • Apr 20, 2025 — 7:00 PM</div>
-
-    <!-- QR Code -->
-    <div class="qr-box">
-      <img src="qr-placeholder.png" alt="QR Code" />
-    </div>
-
-    <!-- Ticket Info -->
-    <div class="info">Ticket ID: #12345678</div>
-    <div class="info">Section: VIP</div>
-
-    <!-- Ticket Status -->
-    <div class="status">Active</div>
-
-    <!-- Actions -->
-    <div class="btn-row">
-      <button class="btn-action">Share</button>
-      <button class="btn-action">Download</button>
-    </div>
-  </div>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6.	Profile Page – Full HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Account</title>
-  <style>
-    body {
-      margin: 0;
-      background: #0f1b4c;
-      font-family: Arial, sans-serif;
-      color: white;
-      padding-bottom: 80px;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 480px;
-      margin: auto;
-    }
-
-    .profile-header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .profile-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: #ccc;
-      margin: auto;
-      margin-bottom: 10px;
-    }
-
-    .profile-name {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .section {
-      background: #1a2b5c;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .section h4 {
-      font-size: 16px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 5px;
-    }
-
-    .section-item {
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .btn-logout {
-      width: 100%;
-      padding: 12px;
-      background-color: #d9534f;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 30px;
-    }
-
-    .btn-logout:hover {
-      background-color: #c9302c;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Profile -->
-    <div class="profile-header">
-      <div class="profile-avatar"></div>
-      <div class="profile-name">John Doe</div>
-    </div>
-
-    <!-- Account Info -->
-    <div class="section">
-      <h4>Account Info</h4>
-      <div class="section-item">📞 +966 5X XXX XXXX</div>
-      <div class="section-item">✉️ john@example.com</div>
-    </div>
-
-    <!-- Preferences -->
-    <div class="section">
-      <h4>Settings</h4>
-      <div class="section-item">🔔 Notifications</div>
-      <div class="section-item">🌙 Dark Mode</div>
-    </div>
-
-    <!-- Logout -->
-    <button class="btn-logout">Logout</button>
-  </div>
-</body>
-</html>
-7.	Bottom Navigation – Full HTML
-<!-- Bottom Navigation -->
-<div class="bottom-nav">
-  <div class="nav-item active">
-    <span>🏠</span>
-    <small>Home</small>
-  </div>
-  <div class="nav-item">
-    <span>🎟️</span>
-    <small>Tickets</small>
-  </div>
-  <div class="nav-item">
-    <span>🔍</span>
-    <small>Explore</small>
-  </div>
-  <div class="nav-item">
-    <span>👤</span>
-    <small>Account</small>
-  </div>
-</div>
-
-<style>
-  .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #1a2b5c;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    border-top: 1px solid #333;
-    z-index: 999;
+import 'package:app_hayak_cod/screens/login/otp_screen.dart';
+import 'package:flutter/material.dart';
+import 'screens/login/login_screen.dart';
+import 'screens/login/personalize_screen.dart';
+
+void main() {
+  runApp(const HayyakApp());
+}
+
+class HayyakApp extends StatelessWidget {
+  const HayyakApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'HAYYAK',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginWithNumberScreen(),
+        '/personalize': (context) => const PersonalizeScreen(),
+        '/otp': (context) => const OTPScreen(),
+
+      },
+    );
   }
-  .nav-item {
-    text-align: center;
-    font-size: 14px;
-    color: #ccc;
+}
+
+THEME:
+
+import 'package:flutter/material.dart';
+
+ThemeData appTheme = ThemeData(
+  scaffoldBackgroundColor: const Color(0xFF0F1C4D),
+  primaryColor: const Color(0xFFB661CC),
+  fontFamily: 'Roboto',
+);
+COLORS:
+
+import 'package:flutter/material.dart';
+
+class AppColors {
+  static const primary = Color(0xFFB661CC);
+  static const background = Color(0xFF0F1C4D);
+  static const textLight = Colors.white;
+}
+
+CUSTOM BUTTON:
+
+import 'package:flutter/material.dart';
+
+class CustomButton extends StatelessWidget {
+  final String text;
+  final VoidCallback onPressed;
+  final bool filled;
+
+  const CustomButton({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    this.filled = true,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return filled
+        ? ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFB661CC),
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            child: Text(text),
+          )
+        : OutlinedButton(
+            onPressed: onPressed,
+            style: OutlinedButton.styleFrom(
+              side: const BorderSide(color: Colors.white),
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            child: Text(text),
+          );
   }
-  .nav-item.active {
-    color: #ffffff;
+}
+
+
+
+
+
+
+
+TICKET SCREEN:
+
+import 'package:flutter/material.dart';
+
+class TicketScreen extends StatelessWidget {
+  const TicketScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text('Ticket', style: TextStyle(color: Colors.white)),
+        centerTitle: true,
+      ),
+      body: Container(
+        padding: const EdgeInsets.all(24),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/stadium_bg.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TicketButton(
+              text: 'Buy Ticket',
+              icon: Icons.confirmation_number_outlined,
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 20),
+            TicketButton(
+              text: 'Verify Ticket',
+              icon: Icons.verified,
+              color: Colors.teal,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 20),
+            TicketButton(
+              text: 'Scan Your Ticket',
+              icon: Icons.qr_code_scanner,
+              color: Colors.indigo,
+              onPressed: () {},
+            ),
+          ],
+        ),
+      ),
+    );
   }
-  .nav-item span {
-    display: block;
-    font-size: 18px;
+}
+
+class TicketButton extends StatelessWidget {
+  final String text;
+  final IconData icon;
+  final VoidCallback onPressed;
+  final Color color;
+
+  const TicketButton({
+    super.key,
+    required this.text,
+    required this.icon,
+    required this.onPressed,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        icon: Icon(icon, color: Colors.white),
+        label: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          child: Text(
+            text,
+            style: const TextStyle(fontSize: 16),
+          ),
+        ),
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        ),
+      ),
+    );
   }
-</style>
-
-
-
-
-
-8.	VIP / Family / Tourism Packages – Full HTML Example (VIP shown)
-<!-- VIP Package -->
-<section style="background:#0f1b4c; color:white; padding:40px 20px; font-family:sans-serif; min-height:100vh;">
-  <h2 style="font-size:24px; text-align:center;">VIP Package Details</h2>
-  <div style="background:white; color:#333; border-radius:16px; padding:20px; max-width:360px; margin:20px auto;">
-    <h3 style="color:#6a1b9a;">﷼ 450</h3>
-    <ul style="padding-left: 20px;">
-      <li>✔️ Fast track entry</li>
-      <li>✔️ Premium seat view</li>
-      <li>✔️ Premium service</li>
-      <li>✔️ 25% Hotel Discount</li>
-    </ul>
-    <button style="margin-top: 20px; width:100%; padding:12px; background:#ef5350; color:white; border:none; border-radius:10px;">Buy Now</button>
-  </div>
-</section> 
-\\ تكرريه لنفس التنسيق مع تغيير المحتوى لـ Family و Tourism \\
+}
 
 
 
@@ -785,45 +197,1089 @@
 
 
 
-9.	Food Order Flow – Cart + Checkout + Status
-<!-- Food Cart -->
-<section style="background:#f8f8f8; font-family:sans-serif; padding:20px; max-width:480px; margin:auto;">
-  <h2>Cart</h2>
-  <p><strong>Domino’s Pizza</strong><br/>#3465 | 4 May 2025, 23:35</p>
-  <div>🍕 Pepperoni — ﷼ 20 × 1</div>
-  <div>🍟 Fries — ﷼ 15 × 2</div>
-  <button style="width:100%; padding:14px; background:#ef5350; border:none; color:white; font-size:16px; border-radius:8px;">
-    Pay The Bill
-  </button>
-</section>
-10. Stadium Navigation Map
-<section style="background:#0f1b4c; color:white; font-family:sans-serif; padding:20px; max-width:480px; margin:auto;">
-  <h2>Join with HAYYAK</h2>
-  <img src="stadium-crowd.png" alt="Crowd Map" style="width:100%; border-radius:12px; margin:20px 0;" />
-  <p>To Your Seat H3: Use Gate G2</p>
-  <ul style="font-size:14px;">
-    <li>🔴 Very Crowded: G1</li>
-    <li>🟠 Moderate: G2</li>
-    <li>🟢 Low: G3</li>
-  </ul>
-  <div style="display:flex; gap:10px;">
-    <button style="flex:1; padding:10px; background:#9e9e9e; color:white; border:none; border-radius:8px;">Alert Me</button>
-    <button style="flex:1; padding:10px; background:#2196f3; color:white; border:none; border-radius:8px;">Clear Route</button>
-  </div>
-</section>
 
-11. Hayyak Store – Browse + Product + Checkout
-<!-- Store Browse -->
-<section style="background:#f8f8f8; font-family:sans-serif; padding:20px; max-width:480px; margin:auto;">
-  <h2 style="text-align:center;">Hayyak Store</h2>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
-    <div style="background:white; padding:10px; border-radius:10px; text-align:center;">
-      <img src="jersey1.png" alt="Jersey" style="width:100%;" />
-      <p>Jersey</p><strong>﷼ 99</strong>
-    </div>
-    <div style="background:white; padding:10px; border-radius:10px; text-align:center;">
-      <img src="hat.png" alt="Hat" style="width:100%;" />
-      <p>Cap</p><strong>﷼ 35</strong>
-    </div>
-  </div>
-</section>
+TICKET INFO SCREEN:
+
+import 'package:flutter/material.dart';
+
+class TicketInfoScreen extends StatelessWidget {
+  const TicketInfoScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      appBar: AppBar(
+        title: const Text('Ticket'),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      body: Center(
+        child: Container(
+          margin: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            color: Colors.white10,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('Ticket info', style: TextStyle(fontSize: 20, color: Colors.white)),
+              const Divider(color: Colors.white54),
+              const SizedBox(height: 10),
+              ticketRow('Time:', '9:00 pm'),
+              ticketRow('Date:', '7-4-2025'),
+              ticketRow('Location:', 'Khobar'),
+              ticketRow('Seat:', '3H'),
+              const SizedBox(height: 24),
+              Image.asset('assets/images/qr_placeholder.png', width: 120), // Replace with QR
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget ticketRow(String title, String value) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6.0),
+      child: Row(
+        children: [
+          Text(title, style: const TextStyle(color: Colors.white70)),
+          const SizedBox(width: 10),
+          Text(value, style: const TextStyle(color: Colors.white)),
+        ],
+      ),
+    );
+  }
+}
+
+SELECT SEAT SCREEN:
+
+import 'package:flutter/material.dart';
+
+class SelectSeatScreen extends StatelessWidget {
+  const SelectSeatScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text('Select Your Seat'),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Legend(color: Colors.grey, text: 'Available'),
+                Legend(color: Colors.white, text: 'Booking'),
+                Legend(color: Colors.purple, text: 'Selecting'),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: Image.asset('assets/images/stadium_seats.png', width: 300), // placeholder seat map
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/confirm-ticket');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.grey,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Buy Ticket'),
+                  SizedBox(width: 10),
+                  Icon(Icons.currency_bitcoin),
+                  SizedBox(width: 5),
+                  Text('200'),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFF0F1C4D),
+        selectedItemColor: Colors.purpleAccent,
+        unselectedItemColor: Colors.white60,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.local_activity), label: 'Tickets'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Shop'),
+          BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Map'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
+        ],
+      ),
+    );
+  }
+}
+
+class Legend extends StatelessWidget {
+  final Color color;
+  final String text;
+
+  const Legend({super.key, required this.color, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Container(width: 14, height: 14, color: color),
+        const SizedBox(width: 6),
+        Text(text, style: const TextStyle(color: Colors.white)),
+      ],
+    );
+  }
+}
+
+CONFIRM TICKET SCREEN:
+
+import 'package:flutter/material.dart';
+
+class ConfirmTicketScreen extends StatelessWidget {
+  const ConfirmTicketScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text('Buy Ticket'),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Legend(color: Colors.grey, text: 'Available'),
+                Legend(color: Colors.white, text: 'Booking'),
+                Legend(color: Colors.purple, text: 'Selecting'),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: Image.asset('assets/images/stadium_seats.png', width: 300),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/ticket-info');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFB661CC),
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Confirm'),
+                  SizedBox(width: 10),
+                  Icon(Icons.currency_bitcoin),
+                  SizedBox(width: 5),
+                  Text('200'),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+PERSONALIZE SCREEN:
+
+import 'package:flutter/material.dart';
+
+class PersonalizeScreen extends StatelessWidget {
+  const PersonalizeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/images/background.png', // your stadium background
+            fit: BoxFit.cover,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 48),
+            child: Column(
+              children: [
+                const SizedBox(height: 80),
+                const Text(
+                  'Personalise Your Experience',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 30),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.notifications, color: Colors.amber),
+                      const SizedBox(width: 16),
+                      const Expanded(
+                        child: Text(
+                          'Get reminders by turn on notification',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.location_on, color: Colors.redAccent),
+                      const SizedBox(width: 16),
+                      const Expanded(
+                        child: Text(
+                          'Turn on your location access\nso we can assist you to explore the stadium',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Spacer(),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFB661CC),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text('Yes Sure!'),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'I will do it later',
+                    style: TextStyle(
+                      color: Colors.white,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+// عند الشراء
+
+final ticket = Ticket(
+  userId: currentUser.id,
+  nationalId: currentUser.nationalId,
+  isTransferable: false,
+);
+
+// يتم تحديث QR كل فترة
+
+String generateDynamicQR(String ticketId) {
+  final time = DateTime.now().millisecondsSinceEpoch ~/ 60000; // كل دقيقة
+  return encrypt('$ticketId-$time');
+}
+
+
+
+OTP SCREEN:
+
+import 'package:flutter/material.dart';
+
+class OTPScreen extends StatelessWidget {
+  const OTPScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 60),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Enter OTP',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Weíve sent a 4-digit code to your mobile number',
+              style: TextStyle(color: Colors.white70),
+            ),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: List.generate(
+                4,
+                (index) => SizedBox(
+                  width: 60,
+                  child: TextField(
+                    style: const TextStyle(color: Colors.white),
+                    keyboardType: TextInputType.number,
+                    textAlign: TextAlign.center,
+                    maxLength: 1,
+                    decoration: InputDecoration(
+                      counterText: "",
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.2),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/dashboard');
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFB661CC),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: const Text('Verify'),
+              ),
+            ),
+            const SizedBox(height: 12),
+            Center(
+              child: TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Resend Code',
+                  style: TextStyle(color: Colors.white70),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+LOGIN SCREEN:
+
+import 'package:flutter/material.dart';
+
+class LoginWithNumberScreen extends StatelessWidget {
+  const LoginWithNumberScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/images/background.png', // Add your background
+            fit: BoxFit.cover,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 48),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 50),
+                Image.asset(
+                  'assets/images/logo.png', // Add your logo if needed
+                  height: 60,
+                ),
+                const SizedBox(height: 40),
+                const Text(
+                  'Sign In',
+                  style: TextStyle(color: Colors.white, fontSize: 24),
+                ),
+                const SizedBox(height: 16),
+                const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Enter Your Mobile Number',
+                    style: TextStyle(color: Colors.white70),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                TextFormField(
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white.withOpacity(0.9),
+                    prefixIcon: const Icon(Icons.phone),
+                    hintText: '+966 XXXXXXXX',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                TextFormField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white.withOpacity(0.9),
+                    prefixIcon: const Icon(Icons.perm_identity),
+                    hintText: 'ID',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 24),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFB661CC),
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text('Continue'),
+                  ),
+                ),
+                const Spacer(),
+                Image.asset(
+                  'assets/images/world_cup.png', // Trophy image
+                  height: 100,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+
+
+PROFILE SCREEN:
+
+import 'package:flutter/material.dart';
+
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        padding: const EdgeInsets.all(24),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(height: 60),
+              const Text('My Profile', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 24),
+              TextFormField(
+                initialValue: 'Ali',
+                decoration: const InputDecoration(labelText: 'Name'),
+              ),
+              TextFormField(
+                initialValue: '+966 593456310',
+                decoration: const InputDecoration(labelText: 'Mobile Number'),
+              ),
+              TextFormField(
+                initialValue: 'Hayyak1@gmail.com',
+                decoration: const InputDecoration(labelText: 'Email Address'),
+              ),
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Date of Birth'),
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: const [
+                  Text('Gender:'),
+                  SizedBox(width: 10),
+                  Expanded(child: RadioListTile(value: 'Female', groupValue: 'gender', onChanged: null, title: Text('Female'))),
+                  Expanded(child: RadioListTile(value: 'Male', groupValue: 'gender', onChanged: null, title: Text('Male'))),
+                ],
+              ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                  child: const Text('Update'),
+                ),
+              ),
+              const SizedBox(height: 12),
+              TextButton(
+                onPressed: () {},
+                child: const Text('Sign Out', style: TextStyle(color: Colors.black87)),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+HOME SCREEN:
+
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: const Icon(Icons.menu, color: Colors.white),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16.0),
+            child: CircleAvatar(backgroundColor: Colors.purple),
+          )
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Hi Ali HAYYAK,,', style: TextStyle(color: Colors.white, fontSize: 22)),
+            const SizedBox(height: 20),
+            const Text('Explore HAYYAK', style: TextStyle(color: Colors.white, fontSize: 18)),
+            const SizedBox(height: 20),
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 2,
+                mainAxisSpacing: 12,
+                crossAxisSpacing: 12,
+                children: const [
+                  HomeTile(icon: Icons.restaurant, title: 'Restaurants', subtitle: 'Order food easily'),
+                  HomeTile(icon: Icons.store, title: 'Store', subtitle: 'Stadium pickup'),
+                  HomeTile(icon: Icons.card_giftcard, title: 'Packages', subtitle: 'Exclusive deals'),
+                  HomeTile(icon: Icons.confirmation_num, title: 'Ticket', subtitle: 'Enter easily'),
+                  HomeTile(icon: Icons.hotel, title: 'Hotel', subtitle: 'Book your stay'),
+                  HomeTile(icon: Icons.directions_bus, title: 'Transportation', subtitle: 'Get there fast'),
+                  HomeTile(icon: Icons.sports_soccer, title: 'Activity', subtitle: 'Let the fun begin!'),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFF0F1C4D),
+        selectedItemColor: Colors.purpleAccent,
+        unselectedItemColor: Colors.white60,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.local_activity), label: 'Tickets'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Shop'),
+          BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Stadium Map'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
+        ],
+      ),
+    );
+  }
+}
+
+class HomeTile extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subtitle;
+
+  const HomeTile({super.key, required this.icon, required this.title, required this.subtitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white12,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon, color: Colors.white, size: 32),
+          const SizedBox(height: 10),
+          Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+          Text(subtitle, style: const TextStyle(color: Colors.white70, fontSize: 12)),
+        ],
+      ),
+    );
+  }
+}
+
+ACCOUNT SCREEN:
+
+import 'package:flutter/material.dart';
+
+class AccountScreen extends StatelessWidget {
+  const AccountScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      appBar: AppBar(
+        title: const Text('Account'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      body: ListView(
+        children: const [
+          AccountTile(icon: Icons.person, title: 'My Profile'),
+          AccountTile(icon: Icons.support_agent, title: 'Customer Service'),
+          AccountTile(icon: Icons.settings, title: 'Setting'),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFF0F1C4D),
+        selectedItemColor: Colors.purpleAccent,
+        unselectedItemColor: Colors.white60,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.local_activity), label: 'Tickets'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Shop'),
+          BottomNavigationBarItem(icon: Icon(Icons.map), label: 'Stadium Map'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
+        ],
+      ),
+    );
+  }
+}
+
+class AccountTile extends StatelessWidget {
+  final IconData icon;
+  final String title;
+
+  const AccountTile({super.key, required this.icon, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(icon, color: Colors.white),
+      title: Text(title, style: const TextStyle(color: Colors.white)),
+      trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white54, size: 16),
+      onTap: () {},
+    );
+  }
+}
+
+ACTIVITY LIST SCREEN:
+import 'package:flutter/material.dart';
+
+class ActivityListScreen extends StatelessWidget {
+  const ActivityListScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0F1C4D),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text("What's around?", style: TextStyle(color: Colors.white)),
+        actions: [
+          TextButton(
+            onPressed: () {},
+            child: const Text("See All", style: TextStyle(color: Colors.white)),
+          )
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: ListView(
+          children: [
+            Row(
+              children: const [
+                DateFilter(text: "Today", selected: true),
+                DateFilter(text: "Tomorrow"),
+                DateFilter(text: "7 April"),
+                DateFilter(text: "8 April"),
+              ],
+            ),
+            const SizedBox(height: 20),
+            SizedBox(
+              height: 160,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  activityImageCard('assets/images/activity1.jpg'),
+                  activityImageCard('assets/images/activity2.jpg'),
+                  activityImageCard('assets/images/activity3.jpg'),
+                ],
+              ),
+            ),
+            const SizedBox(height: 30),
+            const Text('Top Attractions in Al Khobar', style: TextStyle(color: Colors.white, fontSize: 18)),
+            const SizedBox(height: 12),
+            attractionCard(1, "Ithra", "Cultural center and museum.", 'assets/images/ithra.jpg'),
+            attractionCard(2, "AlRashed Mall", "Luxury shopping mall.", 'assets/images/mall.jpg'),
+            attractionCard(3, "Corniche", "Waterfront fun in Khobar.", 'assets/images/corniche.jpg'),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget activityImageCard(String imagePath) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 12.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Image.asset(imagePath, width: 120, height: 160, fit: BoxFit.cover),
+      ),
+    );
+  }
+
+  Widget attractionCard(int number, String title, String desc, String img) {
+    return Card(
+      color: Colors.white12,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ListTile(
+        leading: CircleAvatar(
+          backgroundColor: Colors.purple,
+          child: Text('$number', style: const TextStyle(color: Colors.white)),
+        ),
+        title: Text(title, style: const TextStyle(color: Colors.white)),
+        subtitle: Text(desc, style: const TextStyle(color: Colors.white70)),
+        trailing: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Image.asset(img, width: 60, height: 60, fit: BoxFit.cover),
+        ),
+      ),
+    );
+  }
+}
+
+class DateFilter extends StatelessWidget {
+  final String text;
+  final bool selected;
+
+  const DateFilter({super.key, required this.text, this.selected = false});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(right: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: selected ? Colors.white : Colors.white24,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(color: selected ? Colors.black : Colors.white),
+      ),
+    );
+  }
+}
+
+ACTIVITY INTRO SCREEN:
+
+import 'package:flutter/material.dart';
+
+class ActivityIntroScreen extends StatelessWidget {
+  const ActivityIntroScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/images/discover_bg.png', // A Saudi heritage image
+            fit: BoxFit.cover,
+          ),
+          Positioned(
+            top: 100,
+            left: 20,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  'DISCOVER',
+                  style: TextStyle(fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'SAUDI WITH',
+                  style: TextStyle(fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'HAYYAK',
+                  style: TextStyle(fontSize: 32, color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+Backiges:
+
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "async",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "boolean_selector",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "characters",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "clock",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "collection",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "cupertino_icons",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "fake_async",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter",
+      "rootUri": "file:///C:/src/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "flutter_lints",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "flutter_test",
+      "rootUri": "file:///C:/src/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "leak_tracker",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "leak_tracker_flutter_testing",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "leak_tracker_testing",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/lints-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "matcher",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "material_color_utilities",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "meta",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.15.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "sky_engine",
+      "rootUri": "file:///C:/src/flutter/bin/cache/pkg/sky_engine",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "source_span",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "stack_trace",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "stream_channel",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "string_scanner",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "term_glyph",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "test_api",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "vector_math",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "vm_service",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "app_hayak_cod",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    }
+  ],
+  "generated": "2025-04-17T13:38:45.609219Z",
+  "generator": "pub",
+  "generatorVersion": "3.5.3",
+  "flutterRoot": "file:///C:/src/flutter",
+  "flutterVersion": "3.24.3",
+  "pubCache": "file:///C:/Users/HP/AppData/Local/Pub/Cache"
+}
+
